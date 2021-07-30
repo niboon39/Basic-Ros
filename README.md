@@ -1,4 +1,4 @@
-# Basic-Ros
+# urdf-simulation
 
 * Step 1 : Prepare workspace
   ```
