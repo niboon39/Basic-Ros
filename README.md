@@ -1,6 +1,6 @@
 # urdf-simulation
 
-Video : https://drive.google.com/file/d/1NaKQSUIALOaAPeg3lY54qqAzYhlcxEUs/view?usp=sharing
+Video : https://drive.google.com/file/d/16rxuAB0_U9fA4m-rtzv45cWZ3RSE2im1/view?usp=sharing
 
 * Step 1 : Prepare workspace
   ```
