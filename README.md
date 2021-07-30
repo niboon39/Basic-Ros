@@ -1,5 +1,7 @@
 # urdf-simulation
 
+Video : https://drive.google.com/file/d/1NaKQSUIALOaAPeg3lY54qqAzYhlcxEUs/view?usp=sharing
+
 * Step 1 : Prepare workspace
   ```
    $ mkdir "workspace"
