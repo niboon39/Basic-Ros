@@ -2,18 +2,18 @@
 
 * Step 1 : Prepare workspace
   ```
-   `$ mkdir "workspace"`
-      `*$ cd "workspace"`
-      `*$ mkdir src`
-         `*$ cd src`
-         `*$ mkdir "Project folder"`
-            `*$ cd "Project folder"`
-               `*$ mkdir urdf`
-               `*$ mkdir launch`
-               `*$ mkdir model`
-                  `*$ cd model `
-                  `*$ mkdir meshes`
-               `*$ mkdir src`
+   $ mkdir "workspace"
+      *$ cd "workspace"
+      *$ mkdir src
+         *$ cd src
+         *$ mkdir "Project folder"
+            *$ cd "Project folder"
+               *$ mkdir urdf
+               *$ mkdir launch
+               *$ mkdir model
+                  *$ cd model
+                  *$ mkdir meshes
+               *$ mkdir src
     ```
          
          
