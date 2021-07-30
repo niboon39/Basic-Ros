@@ -32,7 +32,7 @@ Video : https://drive.google.com/file/d/1NaKQSUIALOaAPeg3lY54qqAzYhlcxEUs/view?u
    - http://wiki.ros.org/urdf/XML/joint
          
  
- * Step 5 Moment of inertia 
+ * Step 5 Moment of inertia & Colission
    - http://wiki.ros.org/urdf/Tutorials/Adding%20Physical%20and%20Collision%20Properties%20to%20a%20URDF%20Model
  
  * Setp 6 urdf in Gazebo 
