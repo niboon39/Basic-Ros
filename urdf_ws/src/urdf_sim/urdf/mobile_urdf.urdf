@@ -1,0 +1,407 @@
+<?xml version= "1.0" ?>
+<!-- Change color [ https://www.w3schools.com/css/css_colors_rgb.asp ] -->
+<!-- Base link -->
+<robot name = "mobile_urdf">
+    <link name = "base_link">
+        <visual>
+            <origin xyz = "0 0 0 " rpy = "0 0 0"/>
+            <geometry>
+                    <!-- base -->
+                    <mesh filename = "package://urdf_sim/model/meshes/base.STL"  />        
+                    <!--box size = "1 0.8 0.05" /--> 
+            </geometry>
+            <material name = "Grey"> 
+                <color rgba = "0.43 0.45 0.47 1" /> 
+            </material>
+        </visual>
+        <inertial>
+            <mass value = "0.3" />
+            <inertia ixx="0.002001" ixy="0.0" ixz="0.0" iyy="0.002676" iyz="0" izz="0.004662"/>
+        </inertial> 
+
+        <collision>
+        <origin xyz = "0 0 0 " rpy = "0 0 0"/>
+            <geometry>
+                <mesh filename = "package://urdf_sim/model/meshes/base.STL"  />
+            </geometry>
+        </collision>
+    </link>
+    <!---->
+
+    <!-- WHEEL L - R -->
+    <link name = "leftwheel_link">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "1.57 0 1.57"/>
+            <geometry>
+                    <!-- Left wheel -->
+                    <mesh filename = "package://urdf_sim/model/meshes/wheel.STL"/>     
+                          
+                    <!--cylinder radius = "0.15" length = "0.05" /--> 
+            </geometry>
+            <material name = "Black"> 
+                <color rgba = "0 0 0 1" /> 
+            </material>
+        </visual>
+        <inertial>
+            <mass value = "0.002825" />
+            <inertia ixx="0.000032" ixy="0.0" ixz="0.0" iyy="0.000017" iyz="0" izz="0.000017"/>
+        </inertial>
+        <collision>
+            <origin xyz = "0 0 0" rpy = "1.57 0 1.57"/>
+            <geometry>
+                <mesh filename = "package://urdf_sim/model/meshes/wheel.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name = "rightwheel_link">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "1.57 0 1.57"/>
+            <geometry>
+                    <!-- Right wheel -->
+                    <mesh filename = "package://urdf_sim/model/meshes/wheel.STL"/> 
+                    <!--cylinder radius = "0.15" length = "0.05" / --> 
+            </geometry>
+            <material name = "Black"> 
+                <color rgba = "0 0 0 1" /> 
+            </material>
+        </visual>
+        <inertial>
+            <mass value = "0.002825" />
+            <inertia ixx="0.000032" ixy="0.0" ixz="0.0" iyy="0.000017" iyz="0" izz="0.000017"/>
+        </inertial>
+        <collision>
+            <origin xyz = "0 0 0" rpy = "1.57 0 1.57"/>
+            <geometry>
+                <mesh filename = "package://urdf_sim/model/meshes/wheel.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <!---->
+
+    <!-- lidar -->
+    <link name = "lidarbase_link">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <!-- Lidar -->
+                <mesh filename = "package://urdf_sim/model/meshes/lidarBase.STL"/> 
+                <!--cylinder radius = "0.15" length = "0.2" /-->
+            </geometry>
+            <material name = "BBase">
+                <color rgba = "0.88 0.85 0.82 1"/>
+            </material>
+        </visual>
+        <inertial>
+            <mass value = "0.002825" />
+            <inertia ixx="0.000114" ixy="0.0" ixz="0.0" iyy="0.000114" iyz="0" izz="0.000145"/>
+        </inertial>
+        <collision>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <mesh filename = "package://urdf_sim/model/meshes/lidarBase.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name = "lidar_link">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <!-- Lidar -->
+                <mesh filename = "package://urdf_sim/model/meshes/Lidar.STL"/> 
+                <!-- cylinder radius = "0.15" length = "0.1" / -->
+            </geometry>
+            <material name = "Blue">
+                <color rgba = "0 0.15 0.49 1"/>
+            </material>
+        </visual>
+        <inertial>
+            <mass value = "0.007009" />
+            <inertia ixx="0.000045" ixy="0.0" ixz="0.0" iyy="0.000045" iyz="0" izz="0.000078"/>
+        </inertial>
+        <collision>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <mesh filename = "package://urdf_sim/model/meshes/Lidar.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!---->
+
+    <!-- Caster -->
+    <link name = "caster_link">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <!-- Caster -->
+                <mesh filename = "package://urdf_sim/model/meshes/ball.STL"/> 
+                <!--sphere radius = "0.125" /--> 
+            </geometry>
+            <material name = "yellow">
+                <color rgba = "1 1 0.85 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <mesh filename = "package://urdf_sim/model/meshes/ball.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <!---->
+    
+    <!-- camera -->
+    <link name = "cam_link">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <!-- camera -->
+                <mesh filename = "package://urdf_sim/model/meshes/Cam.STL"/> 
+                <!--box size = "0.1 0.1 0.1" /--> 
+            </geometry>
+            <material name = "orange">
+                <color rgba = "0.48 0.5 0.59 0.6"/>
+            </material>
+        </visual>
+        <inertial>
+            <mass value = "0.036627" />
+            <inertia ixx="0.002001" ixy="0.0" ixz="0.0" iyy="0.002676" iyz="0" izz="0.004662"/>
+        </inertial> 
+        <collision>
+            <origin xyz = "0 0 0" rpy = "0 0 0" />
+            <geometry>
+                <mesh filename = "package://urdf_sim/model/meshes/Cam.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <!---->
+
+    <joint name = "leftwheel_joint" type = "continuous">
+        <origin xyz = "-0.32 0.43 0" rpy = "0 0 0" />
+        <parent link = "base_link" />
+        <child link = "leftwheel_link" />
+        <limit effort = "30" velocity = "10" />
+        <axis rpy = "0 0 0" xyz = "0 1 0" />
+    </joint>
+
+    <joint name = "rightwheel_joint" type = "continuous">
+        <origin xyz = "-0.32 -0.43 0" rpy = "0 0 0" />
+        <parent link = "base_link" />
+        <child link = "rightwheel_link" />
+        <limit effort = "30" velocity = "10" />
+        <axis rpy = "0 0 0" xyz = "0 1 0" />
+    </joint>
+
+    <joint name = "lidarbase_joint" type = "fixed">
+        <origin xyz = "0 0 0.125" rpy = "0 0 0" />
+        <parent link = "base_link" />
+        <child link = "lidarbase_link" />
+        <limit effort = "0" velocity = "0" />
+    </joint>
+
+    <joint name = "lidar_joint" type = "fixed">
+        <origin xyz = "0 0 0.135" rpy = "0 0 0" />
+        <parent link = "lidarbase_link" />
+        <child link = "lidar_link" />
+        <limit effort = "0" velocity = "0" />
+    </joint>
+
+   <joint name = "caster_joint" type = "fixed">
+        <origin xyz = "0.275 0 0" rpy = "0 0 0" />
+        <parent link = "base_link" />
+        <child link = "caster_link" />
+        <limit effort = "0" velocity = "0" />
+   </joint>
+
+    <joint name = "cam_joint" type = "revolute">
+        <origin  xyz = "0.45 0 0.125" rpy = "0 0 0" />
+        <parent  link = "base_link" />
+        <child link = "cam_link" />
+        <limit effort = "10" velocity = "10" upper = "0.79" lower = "-0.79"/>
+        <axis rpy = "0 0 0" xyz = "0 1 0" />
+    </joint>
+    
+    <gazebo reference = "base_link">
+        <material> Gazebo/DarkGrey </material>
+    </gazebo>
+
+    <gazebo reference = "leftwheel_link">
+        <material> Gazebo/WoodPallet </material>
+        <mu1 value = "0.4" />
+        <mu2 value = "0.35"/>
+
+        <kp value = "1000"/>
+        <kd value = "100" />
+    </gazebo>
+
+    <gazebo reference = "rightwheel_link">
+        <material> Gazebo/WoodPallet </material>
+        <mu1 value = "0.4" />
+        <mu2 value = "0.35"/>
+
+        <kp value = "1000"/>
+        <kd value = "100" />
+    </gazebo>
+
+    <gazebo reference = "lidarbase_link">
+        <material> Gazebo/FlatBlack </material>
+    </gazebo>
+
+    <gazebo reference = "lidar_link">
+        <material> Gazebo/SkyBlue </material>
+    </gazebo>
+
+    <gazebo reference = "caster_link">
+        <material> Gazebo/Grey </material>
+
+        <mu1 value = "0.03" />
+        <mu2 value = "0.028"/>
+
+        <kp value = "1000"/>
+        <kd value = "100" />
+    </gazebo>
+
+    <gazebo reference = "cam_link">
+        <material> Gazebo/OrangeTransparentOverlay </material>
+    </gazebo>
+
+    <gazebo>
+
+    <!-- rosrun teleop_twist_keyboard teleop_twist_keyboard.py -->
+
+        <plugin filename = "libgazebo_ros_diff_drive.so" name = "differential_drive_controller">
+            <alwaysOn> true </alwaysOn>
+            <updateRate> 20 </updateRate>
+            <leftJoint> leftwheel_joint </leftJoint>
+            <rightJoint> rightwheel_joint </rightJoint> 
+            <wheelSeparation> 0.9 </wheelSeparation>
+            <wheelDiameter> 0.3 </wheelDiameter> 
+            <torque> 9 </torque> 
+            <commandTopic> cmd_vel </commandTopic> 
+            <odometryTopic> odom </odometryTopic> 
+            <odometryFrame> odom </odometryFrame> 
+            <robotBaseFrame> base_link </robotBaseFrame> 
+        </plugin>
+    </gazebo> 
+
+    <gazebo>
+        <plugin name = "gazebo_ros_control" filename = "libgazebo_ros_control.so">
+            <robotNamespace> /mobile_urdf/ </robotNamespace> 
+        </plugin> 
+    </gazebo>
+
+    <transmission name = "camera_transmission">
+        <type> transmission_interface/SimpleTransmission </type> 
+        <joint name = "cam_joint">
+            <hardwareInterface> hardware_interface/EffortJointInterface </hardwareInterface>
+        </joint>
+
+        <actuator name = "servo">
+            <hardwareInterface>EffortJointInterface</hardwareInterface> 
+            <!-- Report actuator -->
+            <mechanicalReduction> 1 </mechanicalReduction> 
+        </actuator>
+    </transmission>
+
+
+    <!-- Camera Sensor -->
+    <gazebo reference = "cam_link" > 
+        <sensor type = "camera" name = "mobile_cam" >
+            <update_rate> 15.0 </update_rate>
+            <camera name = "head" >
+            <origin rpy = "0 0 0" xyz = "0 0 0"/>
+            <horizontal_fov> 0.3 </horizontal_fov> 
+            <image>
+                <width>800</width>
+                <height>800</height>
+                <format>R8G8B8</format> 
+            </image>
+            <clip>
+                <near> 0.01 </near> 
+                <far>100</far> 
+            </clip>
+            <noise>
+                <type> gaussian </type> 
+                <stddev>0.007</stddev>
+            </noise>
+            </camera> 
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <cameraName>mobile_urdf/camera</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>cam_link</frameName>
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>1.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <!--- lidar -->
+    <gazebo reference = "lidar_link" >
+        <sensor type = "ray" name = "mobile_laser_sensor">
+        <pose> 0 0 0 0 0 0 </pose>
+        <visualize> false </visualize>
+        <update_rate>20</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>720</samples>
+                        <resolution>1</resolution>
+                        <min_angle> -3.14 </min_angle>
+                        <max_angle> 3.14 </max_angle> 
+                    </horizontal>
+                </scan>
+
+                <range>
+                    <min>0.2</min>
+                    <max>10.0</max>
+                    <resolution>0.01</resolution>
+                </range>
+
+                <noise>
+                    <type> gaussian </type>
+                    <mean> 0.0 </mean>
+                    <stddev> 0.01 </stddev>
+                </noise>
+            </ray>
+                <plugin name = "gazebo_ros_head_hokuyo_controller" filename = "libgazebo_ros_laser.so">
+                <topicName> /mobile_urdf/laser/scan </topicName>
+                <frameName> lidar_link </frameName> 
+            </plugin>
+        </sensor>
+    </gazebo>
+    
+    <!-- IMU sensor -->
+    <gazebo reference="base_link">
+        <gravity>true</gravity>
+        <sensor name="mobile_imu_sensor" type="imu">
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <visualize>true</visualize>
+        <topic>__default_topic__</topic>
+        <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+            <topicName>mobile_urdf/imu</topicName>
+            <bodyName>base_link</bodyName>
+            <updateRateHZ>10.0</updateRateHZ>
+            <gaussianNoise>0.0</gaussianNoise>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+            <frameName>base_links</frameName>
+            <initialOrientationAsReference>false</initialOrientationAsReference>
+        </plugin>
+        <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+
+
+</robot>
+
+

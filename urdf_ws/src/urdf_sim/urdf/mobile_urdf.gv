@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"cam_link" [label="cam_link"];
+"caster_link" [label="caster_link"];
+"leftwheel_link" [label="leftwheel_link"];
+"lidarbase_link" [label="lidarbase_link"];
+"lidar_link" [label="lidar_link"];
+"rightwheel_link" [label="rightwheel_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "cam_joint" [label="xyz: 0.45 0 0.125 \nrpy: 0 -0 0"]
+"cam_joint" -> "cam_link"
+"base_link" -> "caster_joint" [label="xyz: 0.275 0 0 \nrpy: 0 -0 0"]
+"caster_joint" -> "caster_link"
+"base_link" -> "leftwheel_joint" [label="xyz: -0.32 0.43 0 \nrpy: 0 -0 0"]
+"leftwheel_joint" -> "leftwheel_link"
+"base_link" -> "lidarbase_joint" [label="xyz: 0 0 0.125 \nrpy: 0 -0 0"]
+"lidarbase_joint" -> "lidarbase_link"
+"lidarbase_link" -> "lidar_joint" [label="xyz: 0 0 0.15 \nrpy: 0 -0 0"]
+"lidar_joint" -> "lidar_link"
+"base_link" -> "rightwheel_joint" [label="xyz: -0.32 -0.43 0 \nrpy: 0 -0 0"]
+"rightwheel_joint" -> "rightwheel_link"
+}

@@ -1,0 +1,11 @@
+mobile_urdf: 
+  # Publisher all joint state 
+  joint_state_controller: 
+    type: joint_state_controller/JointStateController 
+    publish_rate: 20 
+
+  # Position Controllers of cambase joint 
+  camera_joint_position_controller: 
+    type: effort_controllers/JointPositionController 
+    joint : cam_joint 
+    pid: {p: 0.7,i: 1.5,d: 0.03}
