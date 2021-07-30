@@ -1,7 +1,7 @@
 # Basic-Ros
 
 * Step 1 : Prepare workspace
-   *$ mkdir "workspace"
+   `$ mkdir "workspace"`
       *$ cd "workspace"
       *$ mkdir src
          *$ cd src
