@@ -1,0 +1,15 @@
+roslaunch gazebo_ros empty_world.launch
+roslaunch urdf_sim spawn_mobile_rb.launch
+roslaunch urdf_sim mobile_robot_controller.launch 
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+
+rosrun rviz rviz 
+rosrun rqt_image_view rqt_image_view 
+rostopic pub -1 /mobile_urdf/camera_joint_position_controller/command std_msgs/Float64 "data: 0" 
+
+
+rosrun gmapping slam_gmapping scan:=/mobile_urdf/laser/scan
+rosrun map_server map_saver
+
+
+rostopic echo /mobile_urdf/imu
